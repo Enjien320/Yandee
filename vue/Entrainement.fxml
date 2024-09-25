@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="717.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurEntrainement">
+   <top>
+      <VBox prefHeight="118.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Text fill="#c37b7b" strokeType="OUTSIDE" strokeWidth="0.0" text="Entrainement">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="56.0" prefWidth="717.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de dés :">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nombreDes" prefHeight="26.0" prefWidth="27.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="717.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de faces des dés :">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nombreFaces" prefHeight="26.0" prefWidth="35.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="656.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label fx:id="de7" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de3" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de1" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de4" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de8" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Label fx:id="de9" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de5" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de2" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de6" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de10" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                     <font>
+                        <Font size="54.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#lancerDes" prefHeight="42.0" prefWidth="258.0" text="Lancer les dés">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="717.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

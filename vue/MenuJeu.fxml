@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurMenuJeu">
+   <top>
+      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#c37b7b" strokeType="OUTSIDE" strokeWidth="0.0" text="Yandee">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Retour" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu du jeu">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pseudo :" />
+                  <TextField promptText="Joueur" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" text="Jouer" />
+         </children></VBox>
+   </center>
+   <left>
+      <VBox alignment="CENTER" prefHeight="291.0" prefWidth="150.0" spacing="10.0" style="-fx-border-color: #888888;" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Combo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Petite suite" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="134.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 1" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 2" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Suite" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="109.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Brelan" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="11.0" layoutY="157.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Carré" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Yandee" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="109.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 2" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 2" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 2" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Full" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="11.0" layoutY="271.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun combo : Chance" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="291.0" prefWidth="150.0" style="-fx-border-color: #888888;" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Règles">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children></VBox>
+   </right>
+</BorderPane>
