@@ -19,17 +19,15 @@ import vue.Main;
  */
 public class ControleurEntrainement {
 
-	
-
 	/** Boite ouverte s'il y a une erreur */
 	@FXML
 	private Alert boiteAlerte;
 	
-	/** champ de saisie de la chaîne de caractères à analyser */
+	/** champ de saisie du nombre de dés */
 	@FXML
 	private TextField nombreDes;
 	
-	/** champ de saisie de la chaîne de caractères à analyser */
+	/** champ de saisie du nombre de faces */
 	@FXML
 	private TextField nombreFaces;
 	
@@ -125,6 +123,7 @@ public class ControleurEntrainement {
 						.getResultats();
 				
 				/** compte le nombre de dés utilisés */
+				// FIXME simplifier et raccourcir
 				compteur = 0;
 				resultatDe = "";
 				resultatDe += resultat[compteur];

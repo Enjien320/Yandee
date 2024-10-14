@@ -1,14 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurJeu">
-   <center>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Indisponible pour le moment" BorderPane.alignment="CENTER" />
-   </center>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#retour" text="Retour" BorderPane.alignment="CENTER" />
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
+         </children>
+      </HBox>
    </bottom>
+   <top>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#c37b7b" strokeType="OUTSIDE" strokeWidth="0.0" text="Classique">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="282.0" prefWidth="150.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="pseudo" text="Joueur">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <HBox alignment="CENTER" prefHeight="23.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Points :" />
+                  <Label text="0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="282.0" prefWidth="149.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox mnemonicParsing="false" text="Yandee">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Carré">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Brelan">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Suite">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Petite suite">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Full">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+            <CheckBox mnemonicParsing="false" text="Chance">
+               <font>
+                  <Font size="15.0" />
+               </font></CheckBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label fx:id="de1" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de2" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de3" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Label fx:id="de4" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="de5" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="400.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Lancer" />
+                  <Button mnemonicParsing="false" text="Valider" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>

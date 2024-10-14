@@ -103,7 +103,7 @@ public class Main extends Application {
 			chargeurFXMLEntrainement.setLocation(getClass().getResource("Entrainement.fxml"));
 			conteneur = chargeurFXMLEntrainement.load();
 			entrainement = new Scene(conteneur, 1000, 750);
-
+			
 			primaryStage.setTitle("Yandee");
 			primaryStage.setHeight(750);
 			primaryStage.setWidth(1000);

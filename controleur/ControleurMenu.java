@@ -18,7 +18,7 @@ public class ControleurMenu {
 	 */
 	@FXML
 	private void jeu() {
-		Main.activerJeu();
+		Main.activerMenuJeu();
 	}
 	
 	/**

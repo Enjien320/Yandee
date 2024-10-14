@@ -63,7 +63,7 @@
                   </Label>
                   <Label fx:id="de1" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="54.0" />
+                        <Font size="50.0" />
                      </font>
                   </Label>
                   <Label fx:id="de4" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
