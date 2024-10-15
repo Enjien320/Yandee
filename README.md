@@ -1,10 +1,10 @@
 # Yandee
 Jeu de dés inspiré du Yams ( ou Yahtzee )
-<hr>
 <h2>Principe de l'application :</h2>
-L'application est composée de deux parties.
+L'application est composée de deux parties :
+<hr>
 <h3>Le jeu</h3>
-Le jeu, est composée de deux modes.
+La première partie, le jeu, est composée de deux modes.
 La façon de calculer les points et les combos sont cependant les même.<br>
 Les deux modes sont les suivants :
 <h4>Le mode classique</h4>
@@ -18,5 +18,13 @@ Le tour d'un joueur se passe de la manière suivante :<br>
 
 La partie s'arrête une fois que le joueur à obtenu au moins une fois tout les combos.<br>
 Si le joueur à l'un des dix scores les plus élevés, alors sa performance est enregistrée parmis les meilleurs scores
-( ce mode est encore en cours de développement )
+(ce mode est encore en cours de développement)
 <h4>Le mode (nom à trouver)</h4>
+(encore en cours de conception)
+<hr>
+<h3>Lancé de dès</h3>
+La seconde partie de l'application est mode beaucoup plus simple, puisqu'elle permet simplement de lancer des dès<br>
+le fonctionnement de cette partie est le suivant<br>
+- On définit le nombre de dès qu'on souhaite lancer<br>
+- On définit le nombre de faces qu'on souhaite donner au dés<br>
+- On lance les dès et les résultats se génère aléatoirement en fonction des deux paramètres différents
