@@ -10,11 +10,12 @@ Les deux modes sont les suivants :
 <h4>Le mode classique</h4>
 Le mode classique respecte les règles classiques du Yams, à savoir réaliser tout les combos du jeu en obtenant le plus de points possible, avec cependant des petites variantes par rapport au jeu orginal.<br>
 <br>
-Le tour d'un joueur se passe de la manière suivante :<br>
-- Le joueur lance une première fois tout les dès.<br>
-- S'il souhaite relancer les dès, il peut sélectioner les dès dont il souhaite conserver la valeur puis clique sur le bouton relancer.<br>
-- Quand il est satisfait de ses lancés ou qu'il a lancé plus de trois fois les dès, il sélectionne le combo qu'il souhaite réaliser.<br>
-- Son score s'actualise alors en fonction du nombre de points obtenu.<br>
+Le tour d'un joueur se passe de la manière suivante :<br><br>
+
+- Le joueur lance une première fois tout les dès.
+- S'il souhaite relancer les dès, il peut sélectioner les dès dont il souhaite conserver la valeur puis clique sur le bouton relancer.
+- Quand il est satisfait de ses lancés ou qu'il a lancé plus de trois fois les dès, il sélectionne le combo qu'il souhaite réaliser.
+- Son score s'actualise alors en fonction du nombre de points obtenu.
 
 La partie s'arrête une fois que le joueur à obtenu au moins une fois tout les combos.<br>
 Si le joueur à l'un des dix scores les plus élevés, alors sa performance est enregistrée parmis les meilleurs scores.<br>
@@ -24,9 +25,10 @@ Si le joueur à l'un des dix scores les plus élevés, alors sa performance est 
 <hr>
 <h3>Lancé de dès</h3>
 La seconde partie de l'application est mode beaucoup plus simple, puisqu'elle permet simplement de lancer des dès.<br>
-Le fonctionnement de cette partie est le suivant.<br>
-- On définit le nombre de dès qu'on souhaite lancer.<br>
-- On définit le nombre de faces qu'on souhaite donner au dés.<br>
+Le fonctionnement de cette partie est le suivant.<br><br>
+
+- On définit le nombre de dès qu'on souhaite lancer.
+- On définit le nombre de faces qu'on souhaite donner au dés.
 - On lance les dès et les résultats se génère aléatoirement en fonction des deux paramètres différents.
 <hr>
 <h2>Dépôt</h2>
