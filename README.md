@@ -17,23 +17,23 @@ Le tour d'un joueur se passe de la manière suivante :<br>
 - Son score s'actualise alors en fonction du nombre de points obtenu.<br>
 
 La partie s'arrête une fois que le joueur à obtenu au moins une fois tout les combos.<br>
-Si le joueur à l'un des dix scores les plus élevés, alors sa performance est enregistrée parmis les meilleurs scores<br>
+Si le joueur à l'un des dix scores les plus élevés, alors sa performance est enregistrée parmis les meilleurs scores.<br>
 (ce mode est encore en cours de développement)
 <h4>Le mode (nom à trouver)</h4>
 (encore en cours de conception)
 <hr>
 <h3>Lancé de dès</h3>
-La seconde partie de l'application est mode beaucoup plus simple, puisqu'elle permet simplement de lancer des dès<br>
-le fonctionnement de cette partie est le suivant<br>
-- On définit le nombre de dès qu'on souhaite lancer<br>
-- On définit le nombre de faces qu'on souhaite donner au dés<br>
-- On lance les dès et les résultats se génère aléatoirement en fonction des deux paramètres différents
+La seconde partie de l'application est mode beaucoup plus simple, puisqu'elle permet simplement de lancer des dès.<br>
+Le fonctionnement de cette partie est le suivant.<br>
+- On définit le nombre de dès qu'on souhaite lancer.<br>
+- On définit le nombre de faces qu'on souhaite donner au dés.<br>
+- On lance les dès et les résultats se génère aléatoirement en fonction des deux paramètres différents.
 <hr>
 <h2>Dépôt</h2>
 
 Ce dépôt contient les éléments suivants :
 
-- Le code source du logiciel
+- Le code source du logiciel.
 - Les tests associés pour valider le code.
 
 <h2>Dépendances</h2>
