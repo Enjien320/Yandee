@@ -1,6 +1,6 @@
 /**
  * ProbabiliteDe.java                 24 août 2024
- * iut de Rodez, pas de copyright
+ * pas de copyright
  */
 package modele.test;
 

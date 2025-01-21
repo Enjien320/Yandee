@@ -1,6 +1,6 @@
 /**
  * TestCombo.java                 7 sept. 2024
- * iut de Rodez, pas de copyright
+ * pas de copyright
  */
 package modele.test;
 

@@ -5,12 +5,16 @@ import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import modele.Joueur;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 // FIXME ranger la classe à part de la vue
 public class Main extends Application {
 
+	/** Le profil de l'utilisateur */
+	public static Joueur profilJoueur = new Joueur("");
+	
 	/** Scène principale de l'application, celle qui contient les 2 boutons */
 	private static Scene menu;
 	
