@@ -42,6 +42,6 @@ Ce dépôt contient les éléments suivants :
 
 L'application requiert les composants suivants pour fonctionner :
 
-- Java 23
-- JavaFX 23
+- Java 22
+- JavaFX 22
 - JUnit 5
