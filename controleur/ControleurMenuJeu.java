@@ -1,11 +1,12 @@
 /**
  * ControleurMenuJeu.java                 23 sept. 2024
- * iut de Rodez, pas de copyright
+ * pas de copyright
  */
 package controleur;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import modele.Joueur;
 import vue.Main;
 
 /**
@@ -14,6 +15,7 @@ import vue.Main;
  */
 public class ControleurMenuJeu {
 	
+	/** Le TextField grace auquel l'utilisateur entre son pseudo */
 	@FXML
 	private TextField pseudo;
 	
@@ -23,6 +25,9 @@ public class ControleurMenuJeu {
 		String pseudoDonne;
 		
 		pseudoDonne = pseudo.getText();
+		/* on crée un nouveau profil pour l'utilisateur */
+		Main.profilJoueur = new Joueur(pseudoDonne);
+		
 		Main.activerJeu();
 	}
 	

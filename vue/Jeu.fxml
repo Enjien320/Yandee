@@ -32,7 +32,7 @@
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="282.0" prefWidth="150.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="pseudo" text="Joueur">
+            <Label fx:id="pseudo" text="pseudoDuJoueur">
                <font>
                   <Font size="15.0" />
                </font></Label>
@@ -46,6 +46,26 @@
                   </Label>
                </children>
             </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lancés restants :" />
+                  <Label fx:id="lances" text="0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="307.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Combos disponibles :" />
+                  <Label fx:id="comboDispo" alignment="CENTER" prefHeight="430.0" prefWidth="150.0" wrapText="true">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
          <padding>
             <Insets top="25.0" />
@@ -55,31 +75,31 @@
    <right>
       <VBox alignment="CENTER" prefHeight="282.0" prefWidth="149.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <CheckBox mnemonicParsing="false" text="Yandee">
+            <CheckBox fx:id="yandee" mnemonicParsing="false" text="Yandee">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Carré">
+            <CheckBox fx:id="carre" mnemonicParsing="false" text="Carré">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Brelan">
+            <CheckBox fx:id="brelan" mnemonicParsing="false" text="Brelan">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Suite">
+            <CheckBox fx:id="suite" mnemonicParsing="false" text="Suite">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Petite suite">
+            <CheckBox fx:id="petiteSuite" mnemonicParsing="false" text="Petite suite">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Full">
+            <CheckBox fx:id="full" mnemonicParsing="false" text="Full">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox mnemonicParsing="false" text="Chance">
+            <CheckBox fx:id="chance" mnemonicParsing="false" text="Chance">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
@@ -89,43 +109,43 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="400.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="301.0" spacing="20.0">
                <children>
-                  <Label fx:id="de1" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                  <Button fx:id="de1" mnemonicParsing="false" onAction="#conserverTirageDe1" prefHeight="77.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="50.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
-                  <Label fx:id="de2" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                  </Button>
+                  <Button fx:id="de2" mnemonicParsing="false" onAction="#conserverTirageDe2" prefHeight="77.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="50.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
-                  <Label fx:id="de3" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                  </Button>
+                  <Button fx:id="de3" mnemonicParsing="false" onAction="#conserverTirageDe3" prefHeight="77.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="50.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
+                  </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="400.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="301.0" spacing="20.0">
                <children>
-                  <Label fx:id="de4" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                  <Button fx:id="de4" mnemonicParsing="false" onAction="#conserverTirageDe4" prefHeight="77.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="50.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
-                  <Label fx:id="de5" alignment="CENTER" prefHeight="75.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;" textAlignment="CENTER">
+                  </Button>
+                  <Button fx:id="de5" mnemonicParsing="false" onAction="#conserverTirageDe5" prefHeight="77.0" prefWidth="75.0" style="-fx-background-color: #FFFFFF;">
                      <font>
-                        <Font size="50.0" />
+                        <Font size="35.0" />
                      </font>
-                  </Label>
+                  </Button>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="34.0" prefWidth="400.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" text="Lancer" />
-                  <Button mnemonicParsing="false" text="Valider" />
+                  <Button mnemonicParsing="false" onAction="#lancementDes" text="Lancer" />
+                  <Button mnemonicParsing="false" onAction="#validerLance" text="Valider" />
                </children>
             </HBox>
          </children>

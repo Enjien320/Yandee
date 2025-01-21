@@ -1,6 +1,6 @@
 /**
  * Combo.java                 28 août 2024
- * iut de Rodez, pas de copyright
+ * pas de copyright
  */
 package modele;
 
@@ -122,7 +122,8 @@ public class Combo {
 			if (i == 0 || classementDe[i-1][0]-1 != classementDe[i][0]) {
 				for (j=0; j<classementDe.length;j++) {
 					if (i+j < classementDe.length
-							&& classementDe[i][0] == classementDe[i+j][0]+j) {
+						&& classementDe[i][0] == classementDe[i+j][0]+j
+						&&classementDe[i+j][0] != 0) {
 						tailleSuite++;
 					}
 				}

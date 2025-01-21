@@ -1,6 +1,6 @@
 /**
  * ManchetteDe.java                 23 août 2024
- * iut de Rodez, pas de copyright
+ * pas de copyright
  */
 package modele;
 
@@ -29,7 +29,9 @@ public class ManchetteDe {
 	 * @param nombreDe Le nombre de dés à lancer
 	 * @param nombreFace Le nombre de face des dés
 	 * @throws IllegalArgumentException si le nombre de dés n'est pas
-	 *         entier ou non compris entre 1 et 10
+	 *         entier ou non compris entre 1 et 10 
+	 *         si le nombre de faces n'est pas entier ou est 
+	 *         inférieur à 2 ou supérieur à 100
 	 */
 	public ManchetteDe(int nombreDe, int nombreFace) {
 		if (nombreDe < DE_MIN || nombreDe > DE_MAX) {
