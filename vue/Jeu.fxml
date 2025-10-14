@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurJeu">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurJeu">
    <bottom>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
@@ -32,14 +32,14 @@
    <left>
       <VBox alignment="TOP_CENTER" prefHeight="282.0" prefWidth="150.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="pseudo" text="pseudoDuJoueur">
+            <Label fx:id="pseudo" text="pseudoDuJoueur" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></Label>
             <HBox alignment="CENTER" prefHeight="23.0" prefWidth="100.0" spacing="5.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Points :" />
-                  <Label text="0">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Points :" />
+                  <Label text="0" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -48,8 +48,8 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lancés restants :" />
-                  <Label fx:id="lances" text="0">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lancés restants :" />
+                  <Label fx:id="lances" text="0" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -58,8 +58,8 @@
             </HBox>
             <VBox alignment="CENTER" prefHeight="307.0" prefWidth="150.0" spacing="10.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Combos disponibles :" />
-                  <Label fx:id="comboDispo" alignment="CENTER" prefHeight="430.0" prefWidth="150.0" wrapText="true">
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Combos disponibles :" />
+                  <Label fx:id="comboDispo" alignment="CENTER" prefHeight="430.0" prefWidth="150.0" textFill="WHITE" wrapText="true">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -75,31 +75,31 @@
    <right>
       <VBox alignment="CENTER" prefHeight="282.0" prefWidth="149.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <CheckBox fx:id="yandee" mnemonicParsing="false" text="Yandee">
+            <CheckBox fx:id="yandee" mnemonicParsing="false" text="Yandee" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="carre" mnemonicParsing="false" text="Carré">
+            <CheckBox fx:id="carre" mnemonicParsing="false" text="Carré" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="brelan" mnemonicParsing="false" text="Brelan">
+            <CheckBox fx:id="brelan" mnemonicParsing="false" text="Brelan" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="suite" mnemonicParsing="false" text="Suite">
+            <CheckBox fx:id="suite" mnemonicParsing="false" text="Suite" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="petiteSuite" mnemonicParsing="false" text="Petite suite">
+            <CheckBox fx:id="petiteSuite" mnemonicParsing="false" text="Petite suite" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="full" mnemonicParsing="false" text="Full">
+            <CheckBox fx:id="full" mnemonicParsing="false" text="Full" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="chance" mnemonicParsing="false" text="Chance">
+            <CheckBox fx:id="chance" mnemonicParsing="false" text="Chance" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>

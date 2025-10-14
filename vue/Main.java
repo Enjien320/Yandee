@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import modele.Joueur;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 // FIXME ranger la classe à part de la vue
 public class Main extends Application {
@@ -108,11 +109,16 @@ public class Main extends Application {
 			conteneur = chargeurFXMLEntrainement.load();
 			entrainement = new Scene(conteneur, 1000, 750);
 			
+			/* Définit l'icône de la fenêtre */
+			Image icon = new Image("file:vue/images/de.png");
+			primaryStage.getIcons().add(icon);
+			
 			primaryStage.setTitle("Yandee");
 			primaryStage.setHeight(750);
 			primaryStage.setWidth(1000);
 			primaryStage.setScene(menu);
 			fenetrePrincipale = primaryStage;
+			
 			primaryStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -11,11 +11,13 @@ package modele;
  */
 public class Joueur {
 	
-	/** Le pseudopar défaut attribué à un joueur */
+	/** Le pseudo par défaut attribué à un joueur */
 	public static final String PSEUDO_DEFAUT = "Joueur";
 	
+	/** Le pseudo du joueur */
 	private String pseudo;
 	
+	/** Le score atteint par le joueur durant la partie */
 	private int score;
 
 	/**
@@ -41,6 +43,17 @@ public class Joueur {
 	}
 
 	/**
+	 * @param nomJoueur le nouveau pseudo du joueur
+	 */
+	public void setPseudo(String nomJoueur) {
+		if (nomJoueur == null || nomJoueur.isBlank()) {
+			pseudo = PSEUDO_DEFAUT;
+		} else {
+			pseudo = nomJoueur;
+		}
+	}
+
+	/**
 	 * @return le score du joueur
 	 */
 	public int getScore() {
@@ -48,10 +61,15 @@ public class Joueur {
 	}
 
 	/**
-	 * @param score atteint par le joueur pendant sa partie
-	 * @throws IllegalArgumentException
+	 * @param totalScore le score atteint par le joueur durant sa
+	 *        partie
+	 * @throws IllegalArgumentException levée si totalScore est < 0
 	 */
 	public void setScore(int totalScore) {
+		if (totalScore<0) {
+			throw new IllegalArgumentException("Le score ne peut pas être "
+					                           + "négatif");
+		}
 		score = totalScore;
 	}
 

@@ -1,5 +1,5 @@
 /**
- * controleurJeu.java                 28 août 2024
+ * ControleurJeu.java                 28 août 2024
  * pas de copyright
  */
 package controleur;
@@ -96,13 +96,21 @@ public class ControleurJeu {
 	@FXML
 	public void initialize() {
 		lancesRestants = 3;
-		lances.setText("" + lancesRestants);
+		lances.setText(Integer.toString(lancesRestants));
 		
 		//FIXME le pseudo ne s'actualise pas
 		Joueur profilJoueur = Main.profilJoueur;
 		if(profilJoueur != null) {
 			pseudo.setText(profilJoueur.getPseudo());
 		}
+		/* On cache les checkbox tant qu'elles ne sont pas utiles */
+		yandee.setVisible(false);
+		carre.setVisible(false);
+		brelan.setVisible(false);
+		suite.setVisible(false);
+		petiteSuite.setVisible(false);
+		full.setVisible(false);
+		chance.setVisible(false);
 	}
 	
 	/**
@@ -127,7 +135,7 @@ public class ControleurJeu {
 		/* S'il y a des dés à lancer, on remplace les valeurs des dès */
 		if (desALancer != 0 && lancesRestants > 0) {
 			lancesRestants--;
-			lances.setText("" + lancesRestants);
+			lances.setText(Integer.toString(lancesRestants));
 			/* On lance autant de dès qu'il y en a a changer */
 			resultatsLance = new ManchetteDe(desALancer, 6).getResultats();
 			
@@ -146,11 +154,11 @@ public class ControleurJeu {
 		}
 		
 		/* On affiche le résultat du lancé */
-		de1.setText("" + resultatsTirage[0]);
-		de2.setText("" + resultatsTirage[1]);
-		de3.setText("" + resultatsTirage[2]);
-		de4.setText("" + resultatsTirage[3]);
-		de5.setText("" + resultatsTirage[4]);
+		de1.setText(Integer.toString(resultatsTirage[0]));
+		de2.setText(Integer.toString(resultatsTirage[1]));
+		de3.setText(Integer.toString(resultatsTirage[2]));
+		de4.setText(Integer.toString(resultatsTirage[3]));
+		de5.setText(Integer.toString(resultatsTirage[4]));
 	}
 	
 	/**
@@ -161,34 +169,36 @@ public class ControleurJeu {
 		String resultat;
 		
 		lancesRestants = 3;
-		lances.setText("" + lancesRestants);
+		lances.setText(Integer.toString(lancesRestants));
 		
-		/** on récupère les résultats du tirage */
+		/* on récupère les résultats du tirage */
 		if (resultatsTirage != null) {
 			resultat = new Combo(resultatsTirage).getAnnonces();
 			comboDispo.setText(resultat);
-			/** on identifie les combos possibles */
+			/* on identifie les combos possibles */
 			if (resultat.contains("Yandee")) {
-				// TODO rendre cliquable la checkbox
+				/* si combo possible, on affiche la checkbox */
+				yandee.setVisible(true);
 			}
 			if (resultat.contains("carré")) {
-				// TODO rendre cliquable la checkbox
+				carre.setVisible(true);
 			}
 			if (resultat.contains("brelan")) {
-				// TODO rendre cliquable la checkbox
+				brelan.setVisible(true);
 			}
-			if (resultat.contains("suite")) {
-				// TODO rendre cliquable la checkbox
+			if (resultat.startsWith("suite")) {
+				suite.setVisible(true);
 			}
 			if (resultat.contains("petite suite")) {
-				// TODO rendre cliquable la checkbox
+				petiteSuite.setVisible(true);
 			}
 			if (resultat.contains("full")) {
-				// TODO rendre cliquable la checkbox 
+				full.setVisible(true);
 			}
-			// TODO la cehckbox de la chance est toujours disponible
+			chance.setVisible(true);
 		}
 		
+		/* On dé-selectionne chaque dés */
 		for (int i=0; i<aConserver.length; i++) {
 			aConserver[i] = false;
 		}

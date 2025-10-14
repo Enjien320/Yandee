@@ -88,6 +88,7 @@ public class ControleurEntrainement {
 
 		Scanner analyseur;
 
+		/* On vérifie que le nombre de dé soit bien un nombre */
 		analyseur = new Scanner(nombreDes.getText());
 		if (!analyseur.hasNextInt()) {
 			boiteAlerte = new Alert(Alert.AlertType.ERROR,
@@ -96,6 +97,7 @@ public class ControleurEntrainement {
 			boiteAlerte.setHeaderText("Attention");
 			boiteAlerte.showAndWait();
 		} else {
+			/* On vérifie que le nombre de face soit bien un nombre */
 			desALancer = analyseur.nextInt();
 			analyseur = new Scanner(nombreFaces.getText());
 			if (!analyseur.hasNextInt()) {
@@ -106,91 +108,77 @@ public class ControleurEntrainement {
 				boiteAlerte.setHeaderText("Attention");
 				boiteAlerte.showAndWait();
 			} else {
+				/* On récupère le nombre de face du dés */
 				// FIXME simplifier et raccourcir
 				faceDuDes = analyseur.nextInt();
-				de1.setText("");
-				de2.setText("");
-				de3.setText("");
-				de4.setText("");
-				de5.setText("");
-				de6.setText("");
-				de7.setText("");
-				de8.setText("");
-				de9.setText("");
-				de10.setText("");
-			try {
-				resultat = new ManchetteDe(desALancer, faceDuDes)
-						.getResultats();
-				
-				/** compte le nombre de dés utilisés */
-				// FIXME simplifier et raccourcir
-				compteur = 0;
-				resultatDe = "";
-				resultatDe += resultat[compteur];
-				de1.setText(resultatDe);
-				compteur++;
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de2.setText(resultatDe);
+				try {
+					resultat = new ManchetteDe(desALancer, faceDuDes)
+							                   .getResultats();
+					/* On récupère le nombre de dé */
+					// FIXME simplifier et raccourcir
+					compteur = 0;
+					resultatDe = Integer.toString(resultat[compteur]);
+					/* on associe une valeur au dé */
+					de1.setText(resultatDe);
 					compteur++;
+					/* S'il est utilisé, on associe une valeur au dé */
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de2.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de3.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = "";
+						resultatDe += resultat[compteur];
+						de4.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de5.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de6.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de7.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de8.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de9.setText(resultatDe);
+						compteur++;
+					}
+					if (compteur <= desALancer) {
+						resultatDe = Integer.toString(resultat[compteur]);
+						de10.setText(resultatDe);
+						compteur++;
+					}				
+				} catch (IllegalArgumentException e) {
+					/* s'il y a trop de dés ou de faces du dé,
+					 * on renvoi une erreur
+					 */
+					boiteAlerte = new Alert(Alert.AlertType.ERROR,
+							e.getMessage());
+					boiteAlerte.setTitle("Erreur de Frappe");
+					boiteAlerte.setHeaderText("Attention");
+					boiteAlerte.showAndWait();
 				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de3.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de4.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de5.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de6.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de7.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de8.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de9.setText(resultatDe);
-					compteur++;
-				}
-				if (compteur <= desALancer) {
-					resultatDe = "";
-					resultatDe += resultat[compteur];
-					de10.setText(resultatDe);
-					compteur++;
-				}				
-			} catch (IllegalArgumentException e) {
-				boiteAlerte = new Alert(Alert.AlertType.ERROR,
-						e.getMessage());
-				boiteAlerte.setTitle("Erreur de Frappe");
-				boiteAlerte.setHeaderText("Attention");
-				boiteAlerte.showAndWait();
 			}
-		}
 		}
 	}
 	

@@ -14,7 +14,7 @@ import vue.Main;
 public class ControleurMenu {
 	
 	/**
-	 * Permet de passer à la page fxml de jeu
+	 * Permet de passer à la page FXML du menu du jeu
 	 */
 	@FXML
 	private void jeu() {

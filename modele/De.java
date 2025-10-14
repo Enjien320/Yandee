@@ -21,7 +21,7 @@ public class De {
 	private int ResultatDe;
 
 	/**
-	 * Décrire la fonction du constructeur
+	 * Crée un dé avec un nombre de faces données
 	 * @param nombreFaceDe le nombre de faces du dé à créer
 	 * @throws IllegalArgumentException si le nombre de faces n'est
 	 *         pas entier ou est inférieur à MINFACES ou supérieur 

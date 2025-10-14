@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="604.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurMenuJeu">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="604.0" style="-fx-background-color: #006600;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleur.ControleurMenuJeu">
    <top>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
@@ -25,7 +25,7 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="50.0" prefWidth="608.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Retour" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
          </children>
       </HBox>
    </bottom>
@@ -34,7 +34,7 @@
          <children>
             <HBox alignment="CENTER" prefHeight="62.0" prefWidth="600.0" spacing="20.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pseudo :" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Pseudo :" />
                   <TextField fx:id="pseudo" promptText="Joueur" />
                </children>
                <VBox.margin>
@@ -47,7 +47,7 @@
    <left>
       <VBox alignment="CENTER" prefHeight="291.0" prefWidth="150.0" spacing="10.0" style="-fx-border-color: #888888;" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Combo">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Combo">
                <font>
                   <Font size="16.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Petite suite" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Petite suite" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="134.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
@@ -67,7 +67,7 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Suite" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Suite" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="109.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
@@ -75,7 +75,7 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 3" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Brelan" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Brelan" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="11.0" layoutY="157.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
@@ -84,7 +84,7 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 4" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Carré" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Carré" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="92.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
@@ -94,7 +94,7 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Yandee" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Yandee" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="109.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
@@ -104,12 +104,12 @@
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 2" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
                   <Label prefHeight="0.0" prefWidth="14.0" style="-fx-background-color: #FFFFFF;" text=" 5" textAlignment="CENTER" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text=": Full" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text=": Full" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="11.0" layoutY="271.0" prefHeight="30.0" prefWidth="150.0" spacing="5.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun combo : Chance" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Aucun combo : Chance" />
                </children>
             </HBox>
          </children>
@@ -118,17 +118,17 @@
    <right>
       <VBox alignment="CENTER" prefHeight="309.0" prefWidth="150.0" spacing="10.0" style="-fx-border-color: #888888;" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Règles">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Règles">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Objectif : obtenir le meilleur score" textAlignment="CENTER" wrappingWidth="144.55078125" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Pour gagner, obtenez tout les combos" textAlignment="CENTER" wrappingWidth="146.55078125" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Pour faire un maximum de point, obtenez les meilleurs valeurs possibles" textAlignment="CENTER" wrappingWidth="142.55078125" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Vous pouvez relancer trois fois les dès" textAlignment="CENTER" wrappingWidth="144.55078125" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Cliquez sur un dé pour conserver son score" textAlignment="CENTER" wrappingWidth="147.55078125" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="- Si tout les chiffres sont pairs ou impair, le score est doublé" textAlignment="CENTER" wrappingWidth="147.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Objectif : obtenir le meilleur score" textAlignment="CENTER" wrappingWidth="144.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Pour gagner, obtenez tout les combos" textAlignment="CENTER" wrappingWidth="146.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Pour faire un maximum de point, obtenez les meilleurs valeurs possibles" textAlignment="CENTER" wrappingWidth="142.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Vous pouvez relancer trois fois les dès" textAlignment="CENTER" wrappingWidth="144.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Cliquez sur un dé pour conserver son score" textAlignment="CENTER" wrappingWidth="147.55078125" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="- Si tout les chiffres sont pairs ou impair, le score est doublé" textAlignment="CENTER" wrappingWidth="147.55078125" />
          </children></VBox>
    </right>
 </BorderPane>

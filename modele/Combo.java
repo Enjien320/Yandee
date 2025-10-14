@@ -110,7 +110,7 @@ public class Combo {
 				points += 2*40*classementDe[i][0];
 			}
 			if (classementDe[i][1] == 9) {
-				annonces += "Yandee et carré de " + classementDe[i][0] + " | ";
+				annonces += "Triple brelan de " + classementDe[i][0] + " | ";
 				points += (50+40)*classementDe[i][0];
 			}
 			if (classementDe[i][1] == 10) {
