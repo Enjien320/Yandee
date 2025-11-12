@@ -1,4 +1,4 @@
-/**
+/*
  * ProbabiliteDe.java                 24 août 2024
  * pas de copyright
  */
@@ -52,7 +52,7 @@ public class ProbabiliteDe {
 	 * Lance un nombre de fois donné par l'utilisateur
 	 * 10 dés au nombres de faces allant de 1 à 100
 	 * @param args le nombre de tests demandés et nombre de faces du
-	 * dé
+	 *             dé
 	 */
 	public static void main(String[] args) {
 		Scanner test;
@@ -60,16 +60,18 @@ public class ProbabiliteDe {
 		int nombreTest;
 		int nombreFace;
 		
+		/* On vérifie qu'il y a bien 2 arguments, sinon, erreur */
 		if (args.length != 2) {
-			out.print(ERREUR_NOMBRE_ARGS);
+			out.println(ERREUR_NOMBRE_ARGS);
 			out.print(USAGE);
 			exit(1);
 		}
 		
+		/* On vérifie que les arguments sont du bon type, sinon, erreur */
 		for (int i = 0; i < 2; i++) {
 			test = new Scanner(args[i]);
 			if (!test.hasNextInt()) {
-				out.print(ERREUR_TYPE_ARGS);
+				out.println(ERREUR_TYPE_ARGS);
 				out.print(USAGE);
 				exit(1);
 			}
@@ -78,12 +80,16 @@ public class ProbabiliteDe {
 		nombreTest = parseInt(args[0]);
 		nombreFace = parseInt(args[1]);
 		
+		/* On vérifie que le nombre de test est valide, sinon, erreur */
 		if (nombreTest  <= 0 || nombreTest > MAX_TEST) {
-			out.print(ERREUR_NOMBRE_TEST);
+			out.println(ERREUR_NOMBRE_TEST);
 			out.print(USAGE);
 			exit(1);
 		}
 		
+		/* On crée un tableau qui va compter le nombre d'apparition
+		 * de chaques faces du dé
+		 */
 		int[][] nombreApparition = new int [nombreFace][2];
 		int[] resultats = new int [10];
 		
@@ -92,16 +98,19 @@ public class ProbabiliteDe {
 			nombreApparition[i][1] = 0;
 		}
 		
+		/* On note le nombre d'apparition de chaques façe */
 		for (int compteur = 0; compteur < nombreTest; compteur++) {
 			resultats = new ManchetteDe(10, nombreFace).getResultats();
 			for (int i = 0; i < resultats.length; i++) {
 				nombreApparition[resultats[i]-1][1]++;
 			}
 		}
+		/* On converti en pourcentage d'apparition de chaques faces */
 		for (int i = 0; i < nombreApparition.length; i++) {
 			nombreApparition[i][1] = nombreApparition[i][1]*10/nombreTest;
 		}
 		
+		/* On affiche le résultats du test */
 		out.print("| ");
 		for (int i = 0; i < nombreApparition.length; i++) {
 			out.print(nombreApparition[i][0] + " " + nombreApparition[i][1] + "% | ");

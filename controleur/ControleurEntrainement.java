@@ -1,4 +1,4 @@
-/**
+/*
  * ControleurEntrainement.java                 25 août 2024
  * pas de copyright
  */
@@ -109,7 +109,6 @@ public class ControleurEntrainement {
 				boiteAlerte.showAndWait();
 			} else {
 				/* On récupère le nombre de face du dés */
-				// FIXME simplifier et raccourcir
 				faceDuDes = analyseur.nextInt();
 				try {
 					resultat = new ManchetteDe(desALancer, faceDuDes)

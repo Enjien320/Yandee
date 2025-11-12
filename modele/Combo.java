@@ -1,4 +1,4 @@
-/**
+/*
  * Combo.java                 28 août 2024
  * pas de copyright
  */
@@ -85,6 +85,7 @@ public class Combo {
 		points = 0;
 		
 		for (i=0; i<classementDe.length && classementDe[i][0] != 0; i++) {
+			// TODO transformer en switch case
 			if (classementDe[i][1] == 3) {
 				annonces += "brelan de " + classementDe[i][0]  + " | ";
 				points += 30*classementDe[i][0];
@@ -123,7 +124,7 @@ public class Combo {
 				for (j=0; j<classementDe.length;j++) {
 					if (i+j < classementDe.length
 						&& classementDe[i][0] == classementDe[i+j][0]+j
-						&&classementDe[i+j][0] != 0) {
+						&& classementDe[i+j][0] != 0) {
 						tailleSuite++;
 					}
 				}
@@ -148,7 +149,6 @@ public class Combo {
 							+ " à " + classementDe[i][0] + " | ";
 					points += 200;
 				}
-				
 			}
 			full &= classementDe[i][1] >= 2;
 			pair &= classementDe[i][0]%2 == 0;
@@ -173,14 +173,14 @@ public class Combo {
 	}
 
 	/**
-	 * @return the annonce
+	 * @return les annonces
 	 */
 	public String getAnnonces() {
 		return annonces;
 	}
 
 	/**
-	 * @return the points
+	 * @return les points
 	 */
 	public int getPoints() {
 		return points;

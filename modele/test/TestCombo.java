@@ -1,4 +1,4 @@
-/**
+/*
  * TestCombo.java                 7 sept. 2024
  * pas de copyright
  */

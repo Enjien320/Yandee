@@ -1,4 +1,4 @@
-/**
+/*
  * ControleurMenuJeu.java                 23 sept. 2024
  * pas de copyright
  */
@@ -6,11 +6,10 @@ package controleur;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import modele.Joueur;
 import vue.Main;
 
 /**
- * Décrire l'utilitée de la classe
+ * Controle les boutons du menu du jeu
  * @author Adrien Vigué
  */
 public class ControleurMenuJeu {
@@ -26,7 +25,7 @@ public class ControleurMenuJeu {
 		
 		pseudoDonne = pseudo.getText();
 		/* on crée un nouveau profil pour l'utilisateur */
-		Main.profilJoueur = new Joueur(pseudoDonne);
+		Main.profilJoueur.setPseudo(pseudoDonne);
 		
 		Main.activerJeu();
 	}

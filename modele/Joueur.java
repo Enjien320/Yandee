@@ -1,4 +1,4 @@
-/**
+/*
  * Pseudo.java                 27 sept. 2024
  * pas de copyright
  */

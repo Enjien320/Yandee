@@ -1,4 +1,4 @@
-/**
+/*
  * ControleurJeu.java                 28 août 2024
  * pas de copyright
  */
@@ -125,6 +125,10 @@ public class ControleurJeu {
 			resultatsTirage = new int[5];
 		}
 		
+		if (lancesRestants == 3) {
+			finTour();
+		}
+		
 		/* On défini le nombre de dès à lancer */
 		desALancer = 0;
 		for (int i=0; i<aConserver.length; i++) {
@@ -186,7 +190,7 @@ public class ControleurJeu {
 			if (resultat.contains("brelan")) {
 				brelan.setVisible(true);
 			}
-			if (resultat.startsWith("suite")) {
+			if (resultat.contains("[ suite")) {
 				suite.setVisible(true);
 			}
 			if (resultat.contains("petite suite")) {
@@ -286,6 +290,128 @@ public class ControleurJeu {
 				aConserver[4] = true;
 				de5.setBorder(Border.stroke(Paint.valueOf("Blue")));
 			}
+		}
+	}
+	
+	/**
+	 * Valide les points pour un Yandee
+	 */
+	@FXML
+	private void yandeeValide() {
+		yandee.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour un carré
+	 */
+	@FXML
+	private void carreValide() {
+		carre.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour un brelan
+	 */
+	@FXML
+	private void brelanValide() {
+		brelan.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour une suite
+	 */
+	@FXML
+	private void suiteValide() {
+		suite.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour une petite suite
+	 */
+	@FXML
+	private void petiteSuiteValide() {
+		petiteSuite.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour un full
+	 */
+	@FXML
+	private void fullValide() {
+		full.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * Valide les points pour une chance
+	 */
+	@FXML
+	private void chanceValide() {
+		chance.setDisable(true);
+		finTour();
+	}
+	
+	/**
+	 * On cache les cases qui n'ont pas encore été cochees
+	 * si toutes les cases sont cochees, on termine la partie
+	 */
+	private void finTour() {
+		boolean partieTerminee;
+		
+		partieTerminee=true;
+		/* On cache les cases pas encore cochees */
+		if (!yandee.isDisable()) {
+			if(yandee.isVisible()) {
+				yandee.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!carre.isDisable()) {
+			if(carre.isVisible()) {
+				carre.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!brelan.isDisable()) {
+			if(brelan.isVisible()) {
+				brelan.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!suite.isDisable()) {
+			if(suite.isVisible()) {
+				suite.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!petiteSuite.isDisable()) {
+			if(petiteSuite.isVisible()) {
+				petiteSuite.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!full.isDisable()) {
+			if(full.isVisible()) {
+				full.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		if (!chance.isDisable()) {
+			if(chance.isVisible()) {
+				chance.setVisible(false);
+			}
+			partieTerminee=false;
+		}
+		
+		/* On verifie si la partie est terminee */
+		if(partieTerminee) {
+			/* Si oui, renvoi sur l'ecran de victoire */
+			Main.activerVictoire();
 		}
 	}
 	

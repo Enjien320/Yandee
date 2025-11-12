@@ -75,31 +75,31 @@
    <right>
       <VBox alignment="CENTER" prefHeight="282.0" prefWidth="149.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <CheckBox fx:id="yandee" mnemonicParsing="false" text="Yandee" textFill="WHITE">
+            <CheckBox fx:id="yandee" mnemonicParsing="false" onAction="#yandeeValide" text="Yandee" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="carre" mnemonicParsing="false" text="Carré" textFill="WHITE">
+            <CheckBox fx:id="carre" mnemonicParsing="false" onAction="#carreValide" text="Carré" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="brelan" mnemonicParsing="false" text="Brelan" textFill="WHITE">
+            <CheckBox fx:id="brelan" mnemonicParsing="false" onAction="#brelanValide" text="Brelan" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="suite" mnemonicParsing="false" text="Suite" textFill="WHITE">
+            <CheckBox fx:id="suite" mnemonicParsing="false" onAction="#suiteValide" text="Suite" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="petiteSuite" mnemonicParsing="false" text="Petite suite" textFill="WHITE">
+            <CheckBox fx:id="petiteSuite" mnemonicParsing="false" onAction="#petiteSuiteValide" text="Petite suite" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="full" mnemonicParsing="false" text="Full" textFill="WHITE">
+            <CheckBox fx:id="full" mnemonicParsing="false" onAction="#fullValide" text="Full" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>
-            <CheckBox fx:id="chance" mnemonicParsing="false" text="Chance" textFill="WHITE">
+            <CheckBox fx:id="chance" mnemonicParsing="false" onAction="#chanceValide" text="Chance" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font></CheckBox>

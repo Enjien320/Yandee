@@ -1,3 +1,7 @@
+/*
+ * Main.java                 24 août 2024
+ * pas de copyright
+ */
 package vue;
 	
 import java.io.IOException;
@@ -10,6 +14,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 
+/**
+ * Permet de lancer l'application
+ * @author Adrien Vigué
+ */
 // FIXME ranger la classe à part de la vue
 public class Main extends Application {
 
@@ -19,11 +27,14 @@ public class Main extends Application {
 	/** Scène principale de l'application, celle qui contient les 2 boutons */
 	private static Scene menu;
 	
-	/** Scène permettant de gérer le menu du jeu */
+	/** Scène contenant le menu du jeu */
 	private static Scene menuJeu;
 	
-	/** Scène permettant de gérer le jeu */
+	/** Scène contenant le jeu */
 	private static Scene jeu;
+	
+	/** Scène contenant l'ecran de victoire */
+	private static Scene victoire;
 	
 	/** Scène permettant de gérer l'entrainement */
 	private static Scene entrainement;
@@ -57,6 +68,14 @@ public class Main extends Application {
 	*/
 	public static void activerJeu() {
 		fenetrePrincipale.setScene(jeu);
+	}
+	
+	/**
+	* Permet de modifier la scène de la fenêtre principale
+	* pour qu'elle devienne celle de l'ecran de victoire
+	*/
+	public static void activerVictoire() {
+		fenetrePrincipale.setScene(victoire);
 	}
 	
 	/**
@@ -99,6 +118,15 @@ public class Main extends Application {
 			chargeurFXMLJeu.setLocation(getClass().getResource("Jeu.fxml"));
 			conteneur = chargeurFXMLJeu.load();
 			jeu = new Scene(conteneur, 1000, 750);
+			
+			/*
+			* Chargement de la vue de l'ecran de vicoire et
+			* création de la scène associée à cette vue
+			*/
+			FXMLLoader chargeurFXMLVictoire = new FXMLLoader();
+			chargeurFXMLVictoire.setLocation(getClass().getResource("Victoire.fxml"));
+			conteneur = chargeurFXMLVictoire.load();
+			victoire = new Scene(conteneur, 1000, 750);
 			
 			/*
 			* Chargement de la vue de la soustraction et

@@ -1,4 +1,4 @@
-/**
+/*
  * TestManchetteDe.java                 24 août 2024
  * pas de copyright
  */

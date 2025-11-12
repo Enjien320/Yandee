@@ -1,4 +1,4 @@
-/**
+/*
  * ManchetteDe.java                 23 août 2024
  * pas de copyright
  */
