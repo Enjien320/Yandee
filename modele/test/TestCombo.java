@@ -31,7 +31,8 @@ class TestCombo {
 			                                    {1, 3, 9}};
 	
 	private static final int[][] JEU_ERRONNE = 
-		                         {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+		                         {null, {},
+		                          {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
 		                          {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}};
 		
 	private static final String[] RESULTAT_COMBO =
@@ -39,7 +40,7 @@ class TestCombo {
 	     "[ full | pair ]", "[ brelan de 3 | petite suite de 1 à 3 | ]",
 	     "[ full | impair ]", "[ carré de 4 | pair ]", "[ Yandee de 5 | impair ]",
 	     "[ double brelan de 6 | ]", "[ carré et brelan de 6 | ]",
-	     "[ double carré de 6 | ]", "[ Yandee et carré de 6 | ]",
+	     "[ double carré de 6 | ]", "[ Triple brelan de 6 | ]",
 	     "[ double Yandee de 6 | full | pair ]",
 	     "[ grande suite de 22 à 29 | ]", "[ chance | impair ]"};
 	
@@ -56,6 +57,10 @@ class TestCombo {
 				()-> new Combo(JEU_ERRONNE[0]));
 		assertThrows(IllegalArgumentException.class,
 				()-> new Combo(JEU_ERRONNE[1]));
+		assertThrows(IllegalArgumentException.class,
+				()-> new Combo(JEU_ERRONNE[2]));
+		assertThrows(IllegalArgumentException.class,
+				()-> new Combo(JEU_ERRONNE[3]));
 		assertDoesNotThrow(()-> new Combo(JEU_DE_TEST[0]));
 		assertDoesNotThrow(()-> new Combo(JEU_DE_TEST[1]));
 		assertDoesNotThrow(()-> new Combo(JEU_DE_TEST[2]));

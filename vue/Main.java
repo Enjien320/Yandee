@@ -46,42 +46,71 @@ public class Main extends Application {
 	private static Stage fenetrePrincipale;
 	
 	/**
-	* Permet de modifier la scène de la fenêtre principale
-	* pour qu'elle devienne la scène principale, celle qui
-	* affiche les 2 boutons addition et soustraction
-	*/
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne la scène principale, celle qui
+	 * affiche les 2 boutons addition et soustraction
+	 */
 	public static void activerMenu() {
 		fenetrePrincipale.setScene(menu);
 	}
 	
 	/**
-	* Permet de modifier la scène de la fenêtre principale
-	* pour qu'elle devienne celle du menu du jeu
-	*/
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne celle du menu du jeu
+	 */
 	public static void activerMenuJeu() {
 		fenetrePrincipale.setScene(menuJeu);
 	}
 	
 	/**
-	* Permet de modifier la scène de la fenêtre principale
-	* pour qu'elle devienne celle du jeu
-	*/
-	public static void activerJeu() {
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne celle du jeu
+	 * @throws IOException 
+	 */
+	public void activerJeu() {
+		/*
+		 * Chargement de la vue du jeu et
+		 * création de la scène associée à cette vue
+		 */
+		FXMLLoader chargeurFXMLJeu = new FXMLLoader();
+		chargeurFXMLJeu.setLocation(getClass().getResource("Jeu.fxml"));
+		Parent conteneur;
+		conteneur = null;
+		try {
+			conteneur = chargeurFXMLJeu.load();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		jeu = new Scene(conteneur, 1000, 750);
 		fenetrePrincipale.setScene(jeu);
 	}
 	
 	/**
-	* Permet de modifier la scène de la fenêtre principale
-	* pour qu'elle devienne celle de l'ecran de victoire
-	*/
-	public static void activerVictoire() {
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne celle de l'ecran de victoire
+	 */
+	public void activerVictoire() {
+		/*
+		 * Chargement de la vue de l'ecran de vicoire et
+		 * création de la scène associée à cette vue
+		 */
+		FXMLLoader chargeurFXMLVictoire = new FXMLLoader();
+		chargeurFXMLVictoire.setLocation(getClass().getResource("Victoire.fxml"));
+		Parent conteneur;
+		conteneur = null;
+		try {
+			conteneur = chargeurFXMLVictoire.load();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		victoire = new Scene(conteneur, 1000, 750);
 		fenetrePrincipale.setScene(victoire);
 	}
 	
 	/**
-	* Permet de modifier la scène de la fenêtre principale
-	* pour qu'elle devienne celle de l'entrainement
-	*/
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne celle de l'entrainement
+	 */
 	public static void activerEntrainement() {
 		fenetrePrincipale.setScene(entrainement);
 	}
@@ -89,7 +118,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			/* création d'un chargeur de code FXML
+			/* 
+			 * Création d'un chargeur de code FXML
 			 * et chargement de la vue de l'application
 			 */
 			FXMLLoader chargeurFXML = new FXMLLoader();
@@ -97,41 +127,41 @@ public class Main extends Application {
 			Parent conteneur = chargeurFXML.load();
 			
 			/*
-			* Création de la scène principale
-			*/
+			 * Création de la scène principale
+			 */
 			menu = new Scene(conteneur, 1000, 750);
 			
 			/*
-			* Chargement de la vue du menu du jeu et
-			* création de la scène associée à cette vue
-			*/
+			 * Chargement de la vue du menu du jeu et
+			 * création de la scène associée à cette vue
+			 */
 			FXMLLoader chargeurFXMLMenuJeu = new FXMLLoader();
 			chargeurFXMLMenuJeu.setLocation(getClass().getResource("MenuJeu.fxml"));
 			conteneur = chargeurFXMLMenuJeu.load();
 			menuJeu = new Scene(conteneur, 1000, 750);
 			
 			/*
-			* Chargement de la vue du jeu et
-			* création de la scène associée à cette vue
-			*/
+			 * Chargement de la vue du jeu et
+			 * création de la scène associée à cette vue
+			 */
 			FXMLLoader chargeurFXMLJeu = new FXMLLoader();
 			chargeurFXMLJeu.setLocation(getClass().getResource("Jeu.fxml"));
 			conteneur = chargeurFXMLJeu.load();
 			jeu = new Scene(conteneur, 1000, 750);
 			
 			/*
-			* Chargement de la vue de l'ecran de vicoire et
-			* création de la scène associée à cette vue
-			*/
+			 * Chargement de la vue de l'ecran de vicoire et
+			 * création de la scène associée à cette vue
+			 */
 			FXMLLoader chargeurFXMLVictoire = new FXMLLoader();
 			chargeurFXMLVictoire.setLocation(getClass().getResource("Victoire.fxml"));
 			conteneur = chargeurFXMLVictoire.load();
 			victoire = new Scene(conteneur, 1000, 750);
 			
 			/*
-			* Chargement de la vue de la soustraction et
-			* création de la scène associée à cette vue
-			*/
+			 * Chargement de la vue de la soustraction et
+			 * création de la scène associée à cette vue
+			 */
 			FXMLLoader chargeurFXMLEntrainement = new FXMLLoader();
 			chargeurFXMLEntrainement.setLocation(getClass().getResource("Entrainement.fxml"));
 			conteneur = chargeurFXMLEntrainement.load();
@@ -154,9 +184,9 @@ public class Main extends Application {
 	}
 	
 	/**
-	* Programme principal
-	* @param args argument non utilisé
-	*/
+	 * Programme principal
+	 * @param args argument non utilisé
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

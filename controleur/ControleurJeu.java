@@ -100,9 +100,8 @@ public class ControleurJeu {
 		
 		//FIXME le pseudo ne s'actualise pas
 		Joueur profilJoueur = Main.profilJoueur;
-		if(profilJoueur != null) {
-			pseudo.setText(profilJoueur.getPseudo());
-		}
+		pseudo.setText(profilJoueur.getPseudo());
+		
 		/* On cache les checkbox tant qu'elles ne sont pas utiles */
 		yandee.setVisible(false);
 		carre.setVisible(false);
@@ -411,7 +410,7 @@ public class ControleurJeu {
 		/* On verifie si la partie est terminee */
 		if(partieTerminee) {
 			/* Si oui, renvoi sur l'ecran de victoire */
-			Main.activerVictoire();
+			ModuleControleur.getMain().activerVictoire();
 		}
 	}
 	

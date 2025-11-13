@@ -20,7 +20,7 @@ Le tour d'un joueur se passe de la manière suivante :<br><br>
 La partie s'arrête une fois que le joueur à obtenu au moins une fois tout les combos.<br>
 Si le joueur à l'un des dix scores les plus élevés, alors sa performance est enregistrée parmis les meilleurs scores.<br>
 (ce mode est encore en cours de développement)
-<h4>Le mode (nom à trouver)</h4>
+<h4>Le mode rogue-like</h4>
 (encore en cours de conception)
 <hr>
 <h3>Lancé de dès</h3>
@@ -42,6 +42,6 @@ Ce dépôt contient les éléments suivants :
 
 L'application requiert les composants suivants pour fonctionner :
 
-- Java 22
-- JavaFX 22
+- Java 25
+- JavaFX 25
 - JUnit 5

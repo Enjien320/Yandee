@@ -13,7 +13,9 @@ public class Combo {
 
 	private String annonces;
 	
+	/* points obtenus grace aux diférentes annonces */
 	private int points;
+	
 	private int tailleSuite;
 	
 	/* vrai si tout chiffres du tirage est présent 2 fois minimum */
@@ -26,9 +28,12 @@ public class Combo {
 	 * obtenu avec le lancé de dé puis calcul le nombre de points
 	 * associés.
 	 * @param tirage les resultats du tirage
-	 * @throws IllegalArgumentException si tirage.length > 10
+	 * @throws IllegalArgumentException si tirage.length null ou > 10
 	 */
 	public Combo(int[] tirage) {
+		if (tirage == null || tirage.length == 0) {
+			throw new IllegalArgumentException("Le nombre de dé doit être <0");
+		}
 		if (tirage.length > 10) {
 			throw new IllegalArgumentException("Le nombre maximum de dé pour"
 					                           + " un combo est de 10 dés");
@@ -84,39 +89,41 @@ public class Combo {
 		annonces = "[ ";
 		points = 0;
 		
+		/* On regarde les annonces obtenus dans le tirage */
 		for (i=0; i<classementDe.length && classementDe[i][0] != 0; i++) {
-			// TODO transformer en switch case
-			if (classementDe[i][1] == 3) {
-				annonces += "brelan de " + classementDe[i][0]  + " | ";
-				points += 30*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 4) {
-				annonces += "carré de " + classementDe[i][0]  + " | ";
-				points += 40*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 5) {
-				annonces += "Yandee de " + classementDe[i][0]  + " | ";
-				points += 50*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 6) {
-				annonces += "double brelan de " + classementDe[i][0]  + " | ";
-				points += 2*30*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 7) {
-				annonces += "carré et brelan de " + classementDe[i][0]  + " | ";
-				points += (40+30)*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 8) {
-				annonces += "double carré de " + classementDe[i][0]  + " | ";
-				points += 2*40*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 9) {
-				annonces += "Triple brelan de " + classementDe[i][0] + " | ";
-				points += (50+40)*classementDe[i][0];
-			}
-			if (classementDe[i][1] == 10) {
-				annonces += "double Yandee de " + classementDe[i][0]  + " | ";
-				points += 2*50*classementDe[i][0];
+			switch(classementDe[i][1]) {
+				case 3:
+					annonces += "brelan de " + classementDe[i][0]  + " | ";
+					points += 30*classementDe[i][0];
+					break;
+				case 4:
+					annonces += "carré de " + classementDe[i][0]  + " | ";
+					points += 40*classementDe[i][0];
+					break;
+				case 5:
+					annonces += "Yandee de " + classementDe[i][0]  + " | ";
+					points += 50*classementDe[i][0];
+					break;
+				case 6:
+					annonces += "double brelan de " + classementDe[i][0]  + " | ";
+					points += 2*30*classementDe[i][0];
+					break;
+				case 7:
+					annonces += "carré et brelan de " + classementDe[i][0]  + " | ";
+					points += (40+30)*classementDe[i][0];
+					break;
+				case 8:
+					annonces += "double carré de " + classementDe[i][0]  + " | ";
+					points += 2*40*classementDe[i][0];
+					break;
+				case 9:
+					annonces += "Triple brelan de " + classementDe[i][0] + " | ";
+					points += (50+40)*classementDe[i][0];
+					break;
+				case 10:
+					annonces += "double Yandee de " + classementDe[i][0]  + " | ";
+					points += 2*50*classementDe[i][0];
+					break;
 			}
 			tailleSuite = 0;
 			/* vérifie que le nombre à analyser n'est pas dans une suite */

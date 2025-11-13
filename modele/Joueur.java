@@ -72,5 +72,4 @@ public class Joueur {
 		}
 		score = totalScore;
 	}
-
 }

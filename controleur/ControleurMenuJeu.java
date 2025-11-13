@@ -26,8 +26,7 @@ public class ControleurMenuJeu {
 		pseudoDonne = pseudo.getText();
 		/* on crée un nouveau profil pour l'utilisateur */
 		Main.profilJoueur.setPseudo(pseudoDonne);
-		
-		Main.activerJeu();
+		ModuleControleur.getMain().activerJeu();
 	}
 	
 	/**

@@ -23,6 +23,16 @@ public class ControleurVictoire {
 	private Label score;
 	
 	/**
+	 * Permet d'afficher le texte de victoire
+	 */
+	@FXML
+	public void initialize() {
+		texte.setText("Félicitation "+ Main.profilJoueur.getPseudo() 
+		              + " vous avez gagné !");
+		score.setText("Score : " + Main.profilJoueur.getScore());
+	}
+	
+	/**
 	 * Permet de passer à la page fxml du menu
 	 */
 	@FXML
