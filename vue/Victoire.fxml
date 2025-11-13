@@ -21,9 +21,12 @@
       </HBox>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="608.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="608.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour au menu principal" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour au menu principal">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
          </children>
       </HBox>
    </bottom>

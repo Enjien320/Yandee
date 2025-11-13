@@ -28,7 +28,7 @@ public class ControleurVictoire {
 	@FXML
 	public void initialize() {
 		texte.setText("Félicitation "+ Main.profilJoueur.getPseudo() 
-		              + " vous avez gagné !");
+		              + ", vous avez gagné !");
 		score.setText("Score : " + Main.profilJoueur.getScore());
 	}
 	

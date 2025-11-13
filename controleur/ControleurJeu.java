@@ -4,8 +4,11 @@
  */
 package controleur;
 
+import java.util.Optional;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Border;
@@ -97,8 +100,7 @@ public class ControleurJeu {
 	public void initialize() {
 		lancesRestants = 3;
 		lances.setText(Integer.toString(lancesRestants));
-		
-		//FIXME le pseudo ne s'actualise pas
+
 		Joueur profilJoueur = Main.profilJoueur;
 		pseudo.setText(profilJoueur.getPseudo());
 		
@@ -419,6 +421,12 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void retour() {
-		Main.activerMenu();
+		Optional<ButtonType> confirmation = ModuleControleur.confirmation(
+											"Retour au menu", "Quitter le jeu ?",
+									  		"Si vous revenez au menu,"
+									  		+ " votre partie sera perdue !");
+		if (confirmation.get().toString().contains("text=Oui")) {
+			Main.activerMenu();
+		}
 	}
 }

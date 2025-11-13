@@ -91,22 +91,15 @@ public class ControleurEntrainement {
 		/* On vérifie que le nombre de dé soit bien un nombre */
 		analyseur = new Scanner(nombreDes.getText());
 		if (!analyseur.hasNextInt()) {
-			boiteAlerte = new Alert(Alert.AlertType.ERROR,
-					"Veuillez rentrer un nombre de dés entier.");
-			boiteAlerte.setTitle("Erreur de Frappe");
-			boiteAlerte.setHeaderText("Attention");
-			boiteAlerte.showAndWait();
+			ModuleControleur.erreur("Veuillez rentrer un nombre de dés entier.",
+									"Erreur de Frappe");
 		} else {
 			/* On vérifie que le nombre de face soit bien un nombre */
 			desALancer = analyseur.nextInt();
 			analyseur = new Scanner(nombreFaces.getText());
 			if (!analyseur.hasNextInt()) {
-				boiteAlerte = new Alert(Alert.AlertType.ERROR,
-						"Veuillez rentrer un nombre de faces"
-								+ " entier.");
-				boiteAlerte.setTitle("Erreur de Frappe");
-				boiteAlerte.setHeaderText("Attention");
-				boiteAlerte.showAndWait();
+				ModuleControleur.erreur("Veuillez rentrer un nombre de dés entier.",
+										"Erreur de Frappe");
 			} else {
 				/* On récupère le nombre de face du dés */
 				faceDuDes = analyseur.nextInt();
@@ -168,14 +161,12 @@ public class ControleurEntrainement {
 						compteur++;
 					}				
 				} catch (IllegalArgumentException e) {
-					/* s'il y a trop de dés ou de faces du dé,
+					/* 
+					 * s'il y a trop ou pas assez de dés/faces du dé,
 					 * on renvoi une erreur
 					 */
-					boiteAlerte = new Alert(Alert.AlertType.ERROR,
-							e.getMessage());
-					boiteAlerte.setTitle("Erreur de Frappe");
-					boiteAlerte.setHeaderText("Attention");
-					boiteAlerte.showAndWait();
+					ModuleControleur.erreur("Veuillez rentrer un nombre de dés"
+											+ " entier.", "Erreur de Frappe");
 				}
 			}
 		}

@@ -51,27 +51,27 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                <children>
-                  <Label fx:id="de7" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de7" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de3" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de3" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de1" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de1" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="50.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de4" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de4" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de8" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de8" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
@@ -80,36 +80,36 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                <children>
-                  <Label fx:id="de9" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de9" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de5" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de5" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de2" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de2" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de6" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de6" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
-                  <Label fx:id="de10" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF;">
+                  <Label fx:id="de10" alignment="CENTER" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
                      <font>
                         <Font size="54.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#lancerDes" prefHeight="42.0" prefWidth="258.0" text="Lancer les dés">
+            <Button mnemonicParsing="false" onAction="#lancerDes" text="Lancer les dés">
                <font>
-                  <Font name="Arial" size="30.0" />
+                  <Font size="20.0" />
                </font></Button>
          </children>
          <BorderPane.margin>
@@ -118,11 +118,11 @@
       </VBox>
    </center>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="717.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="717.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" onAction="#retour" text="Retour">
                <font>
-                  <Font name="Arial" size="30.0" />
+                  <Font size="20.0" />
                </font></Button>
          </children>
       </HBox>

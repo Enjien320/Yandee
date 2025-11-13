@@ -23,9 +23,12 @@
       </HBox>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="608.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="608.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
+            <Button mnemonicParsing="false" onAction="#retour" text="Retour">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
          </children>
       </HBox>
    </bottom>
@@ -41,7 +44,10 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <Button mnemonicParsing="false" onAction="#jouer" text="Jouer" />
+            <Button mnemonicParsing="false" onAction="#jouer" text="Jouer">
+               <font>
+                  <Font size="20.0" />
+               </font></Button>
          </children></VBox>
    </center>
    <left>
