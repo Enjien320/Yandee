@@ -21,7 +21,7 @@ public class ModuleControleur {
 	private static Main main;
 
 	/**
-	 * @return le/la main
+	 * @return l'instance de main
 	 */
 	public static Main getMain() {
 		if (main == null) {
@@ -32,7 +32,7 @@ public class ModuleControleur {
 	
 	/**
 	 * Affiche une boite de dialogue "Erreur"
-	 * @param titre de la boite de dialogue
+	 * @param entete l'entete de la boite de dialogue
 	 * @param message le message à affiché à l'utilisateur
 	 */
 	public static void erreur(String entete, String message) {
@@ -45,7 +45,11 @@ public class ModuleControleur {
 	}
 	
 	/**
-	 * Affiche une boite de dialogue "Confirmation"
+	 * Affiche une boite de dialogue "Confirmation" avec boutons
+	 * personalises
+	 * @param entete l'entete de la boite de dialogue
+	 * @param titre le titre de la boite de dialogue
+	 * @param message le message à affiché à l'utilisateur
 	 * @return le choix de l'utilisateur
 	 */
 	public static Optional<ButtonType> confirmation(String entete, String titre, String message) {

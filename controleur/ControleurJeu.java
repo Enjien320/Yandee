@@ -84,6 +84,10 @@ public class ControleurJeu {
 	@FXML
 	private Label lances;
 	
+	/** L'endroit où sont affichés les points du joueur */
+	@FXML
+	private Label points;
+	
 	/** Défini le nombre de lancés restants */
 	private int lancesRestants;
 	
@@ -103,6 +107,9 @@ public class ControleurJeu {
 
 		Joueur profilJoueur = Main.profilJoueur;
 		pseudo.setText(profilJoueur.getPseudo());
+		
+		/* On cache le label uniquement utile pour le code */
+		comboDispo.setVisible(false);
 		
 		/* On cache les checkbox tant qu'elles ne sont pas utiles */
 		yandee.setVisible(false);
@@ -327,6 +334,9 @@ public class ControleurJeu {
 	@FXML
 	private void suiteValide() {
 		suite.setDisable(true);
+		Main.profilJoueur.setScore(Integer.parseInt(points.getText())
+				+ Combo.PTS_SUITE);
+		points.setText(Integer.toString(Main.profilJoueur.getScore()));
 		finTour();
 	}
 	
@@ -336,6 +346,10 @@ public class ControleurJeu {
 	@FXML
 	private void petiteSuiteValide() {
 		petiteSuite.setDisable(true);
+		points.setText(Integer.toString(Integer.parseInt(points.getText())
+				+ Combo.PTS_PSUITE*2));
+		points.setText(Integer.toString(Integer.parseInt(points.getText())
+				+ Combo.PTS_PSUITE));
 		finTour();
 	}
 	
