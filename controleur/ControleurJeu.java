@@ -347,8 +347,6 @@ public class ControleurJeu {
 	private void petiteSuiteValide() {
 		petiteSuite.setDisable(true);
 		points.setText(Integer.toString(Integer.parseInt(points.getText())
-				+ Combo.PTS_PSUITE*2));
-		points.setText(Integer.toString(Integer.parseInt(points.getText())
 				+ Combo.PTS_PSUITE));
 		finTour();
 	}
