@@ -11,17 +11,23 @@ package modele;
  */
 public class Combo {
 
+	/** Points obtenus grâce à une suite parfaite */
+	public static final int PTS_SSUITE = 800;
+	
+	/** Points obtenus grâce à une grande suite */
+	public static final int PTS_GSUITE = 400;
+	
+	/** Points obtenus grâce à une suite */
+	public static final int PTS_SUITE = 200;
+	
+	/** Points obtenus grâce à une petite suite */
+	public static final int PTS_PSUITE = 100;
+	
+	/* Les différentes annonces obtenues par le joueur */
 	private String annonces;
 	
 	/* points obtenus grace aux diférentes annonces */
 	private int points;
-	
-	private int tailleSuite;
-	
-	/* vrai si tout chiffres du tirage est présent 2 fois minimum */
-	private boolean full = true;
-	private boolean pair = true;
-	private boolean impair = true;
 
 	/**
 	 * Classe les résultats du tirage puis détermine le ou les combo
@@ -39,6 +45,9 @@ public class Combo {
 					                           + " un combo est de 10 dés");
 		}
 		
+		// Définit la taille d'une suite
+		int tailleSuite;
+		
 		// index pour naviguer dans les tableaux
 		int i;
 		int j;
@@ -49,7 +58,12 @@ public class Combo {
 		// tableau utilisé pour définir les points et les combos
 		int[][] classementDe = new int [tirage.length][2];
 		
-		/** 
+		// vrai si tout chiffres du tirage est présent 2 fois minimum 
+		boolean full = true;
+		boolean pair = true;
+		boolean impair = true;
+		
+		/*
 		 * on défini le nombre d'appartion de chaques nombres du 
 		 * tirage et on les range dans l'ordre de leurs première 
 		 * apparition
@@ -72,7 +86,8 @@ public class Combo {
 			}
 		}
 		
-		/* on trie le tableau dans l'ordre décroissant des faces 
+		/* 
+		 * on trie le tableau dans l'ordre décroissant des faces 
 		 * obtenues
 		 */
 		for (i=0; i < classementDe.length; i++) {
@@ -118,7 +133,7 @@ public class Combo {
 					break;
 				case 9:
 					annonces += "Triple brelan de " + classementDe[i][0] + " | ";
-					points += (50+40)*classementDe[i][0];
+					points += 30*3*classementDe[i][0];
 					break;
 				case 10:
 					annonces += "double Yandee de " + classementDe[i][0]  + " | ";
@@ -139,22 +154,22 @@ public class Combo {
 					/* suite parfaite si 10 chiffres se suivent */
 					annonces += "suite parfaite de " + classementDe[i+9][0]  
 							+ " à " + classementDe[i][0] + " | ";
-					points += 700;
+					points += PTS_SSUITE;
 				} else if (tailleSuite >= 8) {
 					/* grande suite [8, 10[ chiffre */
 					annonces += "grande suite de " + classementDe[i+7][0]  
 							+ " à " + classementDe[i][0] + " | ";
-					points += 500;
+					points += PTS_GSUITE;
 				} else if (tailleSuite >= 5) {
 					/* suite classique [5, 8[ chiffres */
 					annonces += "suite de " + classementDe[i+4][0]  
 							+ " à " + classementDe[i][0] + " | ";
-					points += 350;
+					points += PTS_SUITE;
 				} else if (tailleSuite >= 3) {
 					/* petite suite [3, 5[ chiffres */
 					annonces += "petite suite de " + classementDe[i+2][0]  
 							+ " à " + classementDe[i][0] + " | ";
-					points += 200;
+					points += PTS_PSUITE;
 				}
 			}
 			full &= classementDe[i][1] >= 2;
@@ -178,7 +193,7 @@ public class Combo {
 			annonces += "]";
 		}
 	}
-
+	
 	/**
 	 * @return les annonces
 	 */

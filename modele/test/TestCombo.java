@@ -44,9 +44,9 @@ class TestCombo {
 	     "[ double Yandee de 6 | full | pair ]",
 	     "[ grande suite de 22 à 29 | ]", "[ chance | impair ]"};
 	
-	public static final int[] SCORE_COMBO = {700, 350, 40, 290, 40, 320,
+	public static final int[] SCORE_COMBO = {800, 200, 40, 190, 40, 320,
 			                                 500, 360, 420, 480, 540, 
-			                                 1400, 500, 26};
+			                                 1400, 400, 26};
 
 	/**
 	 * Test method for {@link modele.Combo#Combo(int[])}.

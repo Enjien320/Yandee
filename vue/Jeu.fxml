@@ -42,7 +42,7 @@
             <HBox alignment="CENTER" prefHeight="23.0" prefWidth="100.0" spacing="5.0">
                <children>
                   <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Points :" />
-                  <Label text="0" textFill="WHITE">
+                  <Label fx:id="points" text="0" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -59,16 +59,11 @@
                   </Label>
                </children>
             </HBox>
-            <VBox alignment="CENTER" prefHeight="307.0" prefWidth="150.0" spacing="10.0">
-               <children>
-                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Combos disponibles :" />
-                  <Label fx:id="comboDispo" alignment="CENTER" prefHeight="430.0" prefWidth="150.0" textFill="WHITE" wrapText="true">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Label>
-               </children>
-            </VBox>
+            <Label fx:id="comboDispo" alignment="CENTER" prefHeight="0.0" prefWidth="0.0" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
          </children>
          <padding>
             <Insets top="25.0" />
