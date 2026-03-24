@@ -4,6 +4,7 @@
  */
 package controleur;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 import javafx.fxml.FXML;
@@ -12,6 +13,9 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Border;
+import javafx.scene.layout.BorderWidths;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Paint;
 import modele.Combo;
 import modele.Joueur;
@@ -91,11 +95,20 @@ public class ControleurJeu {
 	/** Défini le nombre de lancés restants */
 	private int lancesRestants;
 	
+	/** Le nombre actuel de points */
+	private int pointsActuels;
+	
+	/** Les annonces obtenues */
+	private String resultat;
+	
 	/** Conserve les résultats du tirage actuel */
 	private int[] resultatsTirage;
 	
 	/** Définit si la valeur d'un dès est a conserver */
 	private boolean[] aConserver = {false, false, false, false, false};
+	
+	/** La liste des points pour chaque annonces */
+	private HashMap<String, Integer> pointsParAnnonces;
 	
 	/**
 	 * Permet d'afficher le pseudo choisi par le joueur
@@ -103,6 +116,7 @@ public class ControleurJeu {
 	@FXML
 	public void initialize() {
 		lancesRestants = 3;
+		pointsActuels = 0;
 		lances.setText(Integer.toString(lancesRestants));
 
 		Joueur profilJoueur = Main.profilJoueur;
@@ -177,34 +191,37 @@ public class ControleurJeu {
 	 * Permet de valider le résultat du lancé
 	 */
 	@FXML
-	private void validerLance() {
-		String resultat;
-		
+	private void validerLance() {	
 		lancesRestants = 3;
 		lances.setText(Integer.toString(lancesRestants));
 		
 		/* on récupère les résultats du tirage */
 		if (resultatsTirage != null) {
 			resultat = new Combo(resultatsTirage).getAnnonces();
+			pointsParAnnonces = new Combo(resultatsTirage).getPointsParAnnonce();
 			comboDispo.setText(resultat);
 			/* on identifie les combos possibles */
 			if (resultat.contains("Yandee")) {
 				/* si combo possible, on affiche la checkbox */
 				yandee.setVisible(true);
 			}
-			if (resultat.contains("carré")) {
+			if (resultat.contains("Carré")) {
+				/* si combo possible, on affiche la checkbox */
 				carre.setVisible(true);
 			}
-			if (resultat.contains("brelan")) {
+			if (resultat.contains("Brelan")) {
+				/* si combo possible, on affiche la checkbox */
 				brelan.setVisible(true);
 			}
-			if (resultat.contains("[ suite")) {
+			if (resultat.contains("Petite suite")) {
+				/* si combo possible, on affiche la checkbox */
+				petiteSuite.setVisible(true);
+			} else if (resultat.contains("Suite")) {
+				/* si combo possible, on affiche la checkbox */
 				suite.setVisible(true);
 			}
-			if (resultat.contains("petite suite")) {
-				petiteSuite.setVisible(true);
-			}
-			if (resultat.contains("full")) {
+			if (resultat.contains("Full")) {
+				/* si combo possible, on affiche la checkbox */
 				full.setVisible(true);
 			}
 			chance.setVisible(true);
@@ -214,11 +231,11 @@ public class ControleurJeu {
 		for (int i=0; i<aConserver.length; i++) {
 			aConserver[i] = false;
 		}
-		de1.setBorder(null);
-		de2.setBorder(null);
-		de3.setBorder(null);
-		de4.setBorder(null);
-		de5.setBorder(null);
+		de1.setBorder(Border.EMPTY);
+		de2.setBorder(Border.EMPTY);
+		de3.setBorder(Border.EMPTY);
+		de4.setBorder(Border.EMPTY);
+		de5.setBorder(Border.EMPTY);
 	}
 	
 	/**
@@ -229,10 +246,10 @@ public class ControleurJeu {
 		if (lancesRestants != 3) {
 			if (aConserver[0]) {
 				aConserver[0] = false;
-				de1.setBorder(null);
+				de1.setBorder(Border.EMPTY);
 			} else {
 				aConserver[0] = true;
-				de1.setBorder(Border.stroke(Paint.valueOf("Blue")));
+				de1.setBorder(Border.stroke(Color.ORANGE));
 			}
 		}
 	}
@@ -245,10 +262,10 @@ public class ControleurJeu {
 		if (lancesRestants != 3) {
 			if (aConserver[1]) {
 				aConserver[1] = false;
-				de2.setBorder(null);
+				de2.setBorder(Border.EMPTY);
 			} else {
 				aConserver[1] = true;
-				de2.setBorder(Border.stroke(Paint.valueOf("Blue")));
+				de2.setBorder(Border.stroke(Color.ORANGE));
 			}
 		}
 	}
@@ -261,10 +278,10 @@ public class ControleurJeu {
 		if (lancesRestants != 3) {
 			if (aConserver[2]) {
 				aConserver[2] = false;
-				de3.setBorder(null);
+				de3.setBorder(Border.EMPTY);
 			} else {
 				aConserver[2] = true;
-				de3.setBorder(Border.stroke(Paint.valueOf("Blue")));
+				de3.setBorder(Border.stroke(Color.ORANGE));
 			}
 		}
 	}
@@ -277,10 +294,10 @@ public class ControleurJeu {
 		if (lancesRestants != 3) {
 			if (aConserver[3]) {
 				aConserver[3] = false;
-				de4.setBorder(null);
+				de4.setBorder(Border.EMPTY);
 			} else {
 				aConserver[3] = true;
-				de4.setBorder(Border.stroke(Paint.valueOf("Blue")));
+				de4.setBorder(Border.stroke(Color.ORANGE));
 			}
 		}
 	}
@@ -293,10 +310,11 @@ public class ControleurJeu {
 		if (lancesRestants != 3) {
 			if (aConserver[4]) {
 				aConserver[4] = false;
-				de5.setBorder(null);
+				de5.setBorder(Border.EMPTY);
+				
 			} else {
 				aConserver[4] = true;
-				de5.setBorder(Border.stroke(Paint.valueOf("Blue")));
+				de5.setBorder(Border.stroke(Color.ORANGE));
 			}
 		}
 	}
@@ -334,9 +352,6 @@ public class ControleurJeu {
 	@FXML
 	private void suiteValide() {
 		suite.setDisable(true);
-		Main.profilJoueur.setScore(Integer.parseInt(points.getText())
-				+ Combo.PTS_SUITE);
-		points.setText(Integer.toString(Main.profilJoueur.getScore()));
 		finTour();
 	}
 	
@@ -346,8 +361,6 @@ public class ControleurJeu {
 	@FXML
 	private void petiteSuiteValide() {
 		petiteSuite.setDisable(true);
-		points.setText(Integer.toString(Integer.parseInt(points.getText())
-				+ Combo.PTS_PSUITE));
 		finTour();
 	}
 	
@@ -357,6 +370,12 @@ public class ControleurJeu {
 	@FXML
 	private void fullValide() {
 		full.setDisable(true);
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Full")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Full");
+		}
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -366,6 +385,12 @@ public class ControleurJeu {
 	@FXML
 	private void chanceValide() {
 		chance.setDisable(true);
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Chance")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Chance");
+		}
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	

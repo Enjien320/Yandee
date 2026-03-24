@@ -169,18 +169,16 @@ public class Combo {
 			annonces += "Full | ";
 			pointsAnnonce = tirage.length*50*i;
 			pointsTotaux += pointsAnnonce;
-			pointsParAnnonce.put("Full",
-		 			 			 pointsAnnonce);
+			pointsParAnnonce.put("Full", pointsAnnonce);
 		}
+		pointsAnnonce = 0;
+		for (i=0; i<classementDe.length; i++) {
+			pointsAnnonce += classementDe[i][0]*classementDe[i][1];
+		}
+		pointsParAnnonce.put("Chance", pointsAnnonce);
 		if (annonces == "[ ") {
 			annonces += "Chance | ";
-			pointsAnnonce = 0;
-			for (i=0; i<classementDe.length; i++) {
-				pointsAnnonce += classementDe[i][0]*classementDe[i][1];
-			}
 			pointsTotaux += pointsAnnonce;
-			pointsParAnnonce.put("Chance",
-		 			 			 pointsAnnonce);
 		}
 		if (pair || impair) {
 			annonces += pair ? "Pair ]" : "Impair ]";
