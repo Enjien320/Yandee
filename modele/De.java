@@ -18,7 +18,7 @@ public class De {
 	public static final int MAX_FACES = 100;
 	
 	private int nombreFace;
-	private int ResultatDe;
+	private int resultatDe;
 
 	/**
 	 * Crée un dé avec un nombre de faces données
@@ -50,22 +50,22 @@ public class De {
 		double zoneResultat;
 		double resultat;
 		
-		this.ResultatDe = 0;
+		this.resultatDe = 0;
 		zoneResultat = 0.0;
 		resultat = Math.random();
 		do {
-			ResultatDe++;
+			resultatDe++;
 			zoneResultat += 1.0/(double)getNombreFace();
 		} while (zoneResultat < resultat);
 		
-		return ResultatDe;
+		return resultatDe;
 	}
 
 	/**
 	 * @return le résultat donné par le dé
 	 */
 	public int getResultatDe() {
-		return ResultatDe;
+		return resultatDe;
 	}
 	
 	/**
