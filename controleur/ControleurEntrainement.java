@@ -87,6 +87,17 @@ public class ControleurEntrainement {
 		int[] resultat;
 
 		Scanner analyseur;
+		
+		de1.setVisible(false);
+		de2.setVisible(false);
+		de3.setVisible(false);
+		de4.setVisible(false);
+		de5.setVisible(false);
+		de6.setVisible(false);
+		de7.setVisible(false);
+		de8.setVisible(false);
+		de9.setVisible(false);
+		de10.setVisible(false);
 
 		/* On vérifie que le nombre de dé soit bien un nombre */
 		analyseur = new Scanner(nombreDes.getText());
@@ -109,53 +120,63 @@ public class ControleurEntrainement {
 					/* On récupère le nombre de dé */
 					// FIXME simplifier et raccourcir
 					compteur = 0;
+					de1.setVisible(true);
 					resultatDe = Integer.toString(resultat[compteur]);
 					/* on associe une valeur au dé */
 					de1.setText(resultatDe);
 					compteur++;
 					/* S'il est utilisé, on associe une valeur au dé */
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de2.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de2.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de3.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de3.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de4.setVisible(true);
 						resultatDe = "";
 						resultatDe += resultat[compteur];
 						de4.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < desALancer) {
+						de5.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de5.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de6.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de6.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de7.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de7.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de8.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de8.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de9.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de9.setText(resultatDe);
 						compteur++;
 					}
-					if (compteur <= desALancer) {
+					if (compteur < resultat.length) {
+						de10.setVisible(true);
 						resultatDe = Integer.toString(resultat[compteur]);
 						de10.setText(resultatDe);
 						compteur++;
