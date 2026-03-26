@@ -13,10 +13,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderWidths;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.LinearGradient;
-import javafx.scene.paint.Paint;
 import modele.Combo;
 import modele.Joueur;
 import modele.ManchetteDe;
@@ -101,6 +98,9 @@ public class ControleurJeu {
 	/** Les annonces obtenues */
 	private String resultat;
 	
+	/** Profil duu joueur */
+	private Joueur profilJoueur;
+	
 	/** Conserve les résultats du tirage actuel */
 	private int[] resultatsTirage;
 	
@@ -119,7 +119,7 @@ public class ControleurJeu {
 		pointsActuels = 0;
 		lances.setText(Integer.toString(lancesRestants));
 
-		Joueur profilJoueur = Main.profilJoueur;
+		profilJoueur = Main.profilJoueur;
 		pseudo.setText(profilJoueur.getPseudo());
 		
 		/* On cache le label uniquement utile pour le code */
@@ -324,7 +324,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void yandeeValide() {
+		/* On désactive la checkbox */
 		yandee.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Yandee")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Yandee");
+		}
+		
+		/* On appelle la fin du tour */
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -333,7 +344,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void carreValide() {
+		/* On désactive la checkbox */
 		carre.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Carré")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Carré");
+		}
+		
+		/* On appelle la fin du tour */
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -342,7 +364,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void brelanValide() {
+		/* On désactive la checkbox */
 		brelan.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Brelan")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Brelan");
+		}
+		
+		/* On appelle la fin du tour */
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -351,7 +384,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void suiteValide() {
+		/* On désactive la checkbox */
 		suite.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Suite")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Suite");
+		}
+		
+		/* On appelle la fin du tour */
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -360,7 +404,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void petiteSuiteValide() {
+		/* On désactive la checkbox */
 		petiteSuite.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
+		if(resultat.contains("air")) {
+			pointsActuels += pointsParAnnonces.get("Petite suite")*2;
+		} else {
+			pointsActuels += pointsParAnnonces.get("Petite suite");
+		}
+		
+		/* On appelle la fin du tour */
+		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
 	
@@ -369,12 +424,17 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void fullValide() {
+		/* On désactive la checkbox */
 		full.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
 		if(resultat.contains("air")) {
 			pointsActuels += pointsParAnnonces.get("Full")*2;
 		} else {
 			pointsActuels += pointsParAnnonces.get("Full");
 		}
+		
+		/* On appelle la fin du tour */
 		points.setText(Integer.toString(pointsActuels));
 		finTour();
 	}
@@ -384,13 +444,18 @@ public class ControleurJeu {
 	 */
 	@FXML
 	private void chanceValide() {
+		/* On désactive la checkbox */
 		chance.setDisable(true);
+		
+		/* On ajoute les point correspondant (*2 si pair/imparir) */
 		if(resultat.contains("air")) {
 			pointsActuels += pointsParAnnonces.get("Chance")*2;
 		} else {
 			pointsActuels += pointsParAnnonces.get("Chance");
 		}
 		points.setText(Integer.toString(pointsActuels));
+		
+		/* On appelle la fin du tour */
 		finTour();
 	}
 	
@@ -448,7 +513,10 @@ public class ControleurJeu {
 		
 		/* On verifie si la partie est terminee */
 		if(partieTerminee) {
-			/* Si oui, renvoi sur l'ecran de victoire */
+			/* Si oui, On valide le score */
+			profilJoueur.setScore(pointsActuels);
+			
+			/* Renvoi sur l'ecran de victoire */
 			ModuleControleur.getMain().activerVictoire();
 		}
 	}
