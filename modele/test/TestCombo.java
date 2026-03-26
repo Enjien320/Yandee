@@ -44,15 +44,15 @@ class TestCombo {
 	     "[ Double Yandee de 6 | Full | Pair ]",
 	     "[ Grande suite de 22 à 29 | ]", "[ Chance | Impair ]"};
 	
-	public static final int[] SCORE_COMBO = {900, 230, 200, 199, 200, 320,
+	public static final int[] SCORE_COMBO = {900, 230, 80, 199, 80, 320,
 			                                 500, 360, 420, 480, 540, 
-			                                 2200, 632, 26};
+			                                 1600, 632, 26};
 	public static final String[] SCORE_ANNONCE =
-		{"{Suite parfaite=900}", "{Suite6=230}", "{Full=100}",
-		 "{Petite suite3=109, Brelan3=90}", "{Full=100}", "{Carré4=160}",
-		 "{Yandee5=250}", "{Double brelan=360}", "{Carré et brelan=420}",
-		 "{Double carré=480}", "{Triple brelan=540}",
-		 "{Double Yandee=600, Full=500}", "{Grande suite=632}", "{Chance=13}"};
+		{"{Suite parfaite=900, Chance=55}", "{Suite=230, Chance=20}", "{Full=40, Chance=200}",
+		 "{Brelan=90, Petite suite=109, Chance=13}", "{Full=40, Chance=2}", "{Carré=160, Chance=24}",
+		 "{Yandee=250, Chance=34}", "{Double brelan=360, Chance=45}", "{Carré et brelan=420, Chance=51}",
+		 "{Double carré=480, Chance=57}", "{Triple brelan=540, Chance=63}",
+		 "{Double Yandee=600, Full=200, Chance=60}", "{Grande suite=632, Chance=204}", "{Chance=13}"};
 
 	/**
 	 * Test method for {@link modele.Combo#Combo(int[])}.

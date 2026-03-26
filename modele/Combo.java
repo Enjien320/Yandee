@@ -70,21 +70,21 @@ public class Combo {
 					annonces += "Brelan de " + classementDe[i][0]  + " | ";
 					pointsAnnonce = 30*classementDe[i][0];
 					pointsTotaux += pointsAnnonce;
-					pointsParAnnonce.put("Brelan"+classementDe[i][0],
+					pointsParAnnonce.put("Brelan",
 										 pointsAnnonce);
 					break;
 				case 4:
 					annonces += "Carré de " + classementDe[i][0]  + " | ";
 					pointsAnnonce = 40*classementDe[i][0];
 					pointsTotaux += pointsAnnonce;
-					pointsParAnnonce.put("Carré"+classementDe[i][0],
+					pointsParAnnonce.put("Carré",
 										 pointsAnnonce);
 					break;
 				case 5:
 					annonces += "Yandee de " + classementDe[i][0]  + " | ";
 					pointsAnnonce = 50*classementDe[i][0];
 					pointsTotaux += pointsAnnonce;
-					pointsParAnnonce.put("Yandee"+classementDe[i][0],
+					pointsParAnnonce.put("Yandee",
 										 pointsAnnonce);
 					break;
 				case 6:
@@ -149,7 +149,7 @@ public class Combo {
 							+ " à " + classementDe[i][0] + " | ";
 					pointsAnnonce = 200+(classementDe[i][0]*tailleSuite);
 					pointsTotaux += pointsAnnonce;
-					pointsParAnnonce.put("Suite"+classementDe[i][0],
+					pointsParAnnonce.put("Suite",
 				 			 			 pointsAnnonce);
 				} else if (tailleSuite >= 3) {
 					/* petite suite [3, 5[ chiffres */
@@ -157,7 +157,7 @@ public class Combo {
 							+ " à " + classementDe[i][0] + " | ";
 					pointsAnnonce = 100+(classementDe[i][0]*tailleSuite);
 					pointsTotaux += pointsAnnonce;
-					pointsParAnnonce.put("Petite suite"+classementDe[i][0],
+					pointsParAnnonce.put("Petite suite",
 				 			 			 pointsAnnonce);
 				}
 			}
@@ -167,7 +167,7 @@ public class Combo {
 		}
 		if (full) {
 			annonces += "Full | ";
-			pointsAnnonce = tirage.length*50*i;
+			pointsAnnonce = tirage.length*20*i;
 			pointsTotaux += pointsAnnonce;
 			pointsParAnnonce.put("Full", pointsAnnonce);
 		}
