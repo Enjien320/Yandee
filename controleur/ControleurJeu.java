@@ -191,40 +191,42 @@ public class ControleurJeu {
 	 * Permet de valider le résultat du lancé
 	 */
 	@FXML
-	private void validerLance() {	
-		lancesRestants = 3;
-		lances.setText(Integer.toString(lancesRestants));
-		
-		/* on récupère les résultats du tirage */
-		if (resultatsTirage != null) {
-			resultat = new Combo(resultatsTirage).getAnnonces();
-			pointsParAnnonces = new Combo(resultatsTirage).getPointsParAnnonce();
-			comboDispo.setText(resultat);
-			/* on identifie les combos possibles */
-			if (resultat.contains("Yandee")) {
-				/* si combo possible, on affiche la checkbox */
-				yandee.setVisible(true);
+	private void validerLance() {
+		if (lancesRestants != 3) {
+			lancesRestants = 3;
+			lances.setText(Integer.toString(lancesRestants));
+			
+			/* on récupère les résultats du tirage */
+			if (resultatsTirage != null) {
+				resultat = new Combo(resultatsTirage).getAnnonces();
+				pointsParAnnonces = new Combo(resultatsTirage).getPointsParAnnonce();
+				comboDispo.setText(resultat);
+				/* on identifie les combos possibles */
+				if (resultat.contains("Yandee")) {
+					/* si combo possible, on affiche la checkbox */
+					yandee.setVisible(true);
+				}
+				if (resultat.contains("Carré")) {
+					/* si combo possible, on affiche la checkbox */
+					carre.setVisible(true);
+				}
+				if (resultat.contains("Brelan")) {
+					/* si combo possible, on affiche la checkbox */
+					brelan.setVisible(true);
+				}
+				if (resultat.contains("Petite suite")) {
+					/* si combo possible, on affiche la checkbox */
+					petiteSuite.setVisible(true);
+				} else if (resultat.contains("Suite")) {
+					/* si combo possible, on affiche la checkbox */
+					suite.setVisible(true);
+				}
+				if (resultat.contains("Full")) {
+					/* si combo possible, on affiche la checkbox */
+					full.setVisible(true);
+				}
+				chance.setVisible(true);
 			}
-			if (resultat.contains("Carré")) {
-				/* si combo possible, on affiche la checkbox */
-				carre.setVisible(true);
-			}
-			if (resultat.contains("Brelan")) {
-				/* si combo possible, on affiche la checkbox */
-				brelan.setVisible(true);
-			}
-			if (resultat.contains("Petite suite")) {
-				/* si combo possible, on affiche la checkbox */
-				petiteSuite.setVisible(true);
-			} else if (resultat.contains("Suite")) {
-				/* si combo possible, on affiche la checkbox */
-				suite.setVisible(true);
-			}
-			if (resultat.contains("Full")) {
-				/* si combo possible, on affiche la checkbox */
-				full.setVisible(true);
-			}
-			chance.setVisible(true);
 		}
 		
 		/* On dé-selectionne chaque dés */
