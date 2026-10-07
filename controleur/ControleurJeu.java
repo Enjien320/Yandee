@@ -251,7 +251,7 @@ public class ControleurJeu {
 				de1.setBorder(Border.EMPTY);
 			} else {
 				aConserver[0] = true;
-				de1.setBorder(Border.stroke(Color.ORANGE));
+				de1.setBorder(Border.stroke(Color.RED));
 			}
 		}
 	}
@@ -267,7 +267,7 @@ public class ControleurJeu {
 				de2.setBorder(Border.EMPTY);
 			} else {
 				aConserver[1] = true;
-				de2.setBorder(Border.stroke(Color.ORANGE));
+				de2.setBorder(Border.stroke(Color.RED));
 			}
 		}
 	}
@@ -283,7 +283,7 @@ public class ControleurJeu {
 				de3.setBorder(Border.EMPTY);
 			} else {
 				aConserver[2] = true;
-				de3.setBorder(Border.stroke(Color.ORANGE));
+				de3.setBorder(Border.stroke(Color.RED));
 			}
 		}
 	}
@@ -299,7 +299,7 @@ public class ControleurJeu {
 				de4.setBorder(Border.EMPTY);
 			} else {
 				aConserver[3] = true;
-				de4.setBorder(Border.stroke(Color.ORANGE));
+				de4.setBorder(Border.stroke(Color.RED));
 			}
 		}
 	}
@@ -316,7 +316,7 @@ public class ControleurJeu {
 				
 			} else {
 				aConserver[4] = true;
-				de5.setBorder(Border.stroke(Color.ORANGE));
+				de5.setBorder(Border.stroke(Color.RED));
 			}
 		}
 	}
