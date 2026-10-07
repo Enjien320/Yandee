@@ -109,7 +109,7 @@ public class ControleurEntrainement {
 			desALancer = analyseur.nextInt();
 			analyseur = new Scanner(nombreFaces.getText());
 			if (!analyseur.hasNextInt()) {
-				ModuleControleur.erreur("Veuillez rentrer un nombre de dés entier.",
+				ModuleControleur.erreur("Veuillez rentrer un nombre de faces entier.",
 										"Erreur de Frappe");
 			} else {
 				/* On récupère le nombre de face du dés */
@@ -186,8 +186,7 @@ public class ControleurEntrainement {
 					 * s'il y a trop ou pas assez de dés/faces du dé,
 					 * on renvoi une erreur
 					 */
-					ModuleControleur.erreur("Veuillez rentrer un nombre de dés"
-											+ " entier.", "Erreur de Frappe");
+					ModuleControleur.erreur(e.getMessage(), "Erreur de Frappe");
 				}
 			}
 		}
