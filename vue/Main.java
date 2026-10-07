@@ -168,7 +168,7 @@ public class Main extends Application {
 			entrainement = new Scene(conteneur, 1000, 750);
 			
 			/* Définit l'icône de la fenêtre */
-			Image icon = new Image("file:vue/images/de.png");
+			Image icon = new Image(getClass().getResourceAsStream("images/de.png"));
 			primaryStage.getIcons().add(icon);
 			
 			primaryStage.setTitle("Yandee");
